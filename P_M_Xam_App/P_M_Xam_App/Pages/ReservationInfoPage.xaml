@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P_M_Xam_App.Pages.ReservationInfoPage">
+    <ContentPage.Content>
+        <StackLayout Margin="0,60,0,60" Spacing="10">
+            <Label Text="Reservation Info"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#2C2C2C" />
+            <StackLayout>
+                <Label Text="First Name"/>
+                <Entry Placeholder="First Name"
+                       x:Name="EntFirstName"
+                       Keyboard="Text" />
+
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Last Name"/>
+                <Entry Placeholder="Last Name"
+                       x:Name="EntLastName"
+                       Keyboard="Text" />
+
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Email"/>
+                <Label Text="email@email.com" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Vehicle Registration"/>
+                <Entry x:Name="EntVehicleReg" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label x:Name="LblCurrency" />
+                <Label x:Name="LblPrice" Margin="10,0"/>
+                
+            </StackLayout>
+            <StackLayout>
+                <Button CornerRadius="25" Text="Pay - New Card"
+                        BackgroundColor="#FA6400"
+                        TextColor="White"
+                        x:Name="BtnPlaceOrder" 
+                        Clicked="BtnPlaceOrder_OnClicked"
+                />
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P_M_Xam_App.Pages.LoginPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="shape.png"
+                       HorizontalOptions="StartAndExpand"
+                       HeightRequest="200" />
+            </StackLayout>
+            <Label Text="Login"
+                   FontAttributes="Bold"
+                   FontSize="Title"
+                   TextColor="#2C2C2C"
+                   Margin="20,20,20,0" />
+            <Label Text="Please Sign in to continue"
+                   FontSize="Medium"
+                   TextColor="LightGray"
+                   Margin="20,0,20,20" />
+            <Entry Placeholder="AuthId"
+                   Margin="20,10,20,10"
+                   x:Name="EntAuthId"
+                   Keyboard="Email" />
+            <Entry Placeholder="User and Password"
+                   Margin="20,10,20,10"
+                   x:Name="EntPassword"
+                   IsPassword="True" />
+            <Grid Margin="20,40,20,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5.5*" />
+                    <ColumnDefinition Width="4.5*" />
+                </Grid.ColumnDefinitions>
+                <Frame BackgroundColor="#FA7400"
+                       Grid.Column="1"
+                       Padding="5"
+                       CornerRadius="35">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="LOGIN"
+                               HorizontalOptions="CenterAndExpand"
+                               FontSize="Medium"
+                               VerticalOptions="Center"
+                               TextColor="White" />
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapLogin" Tapped="TapLogin_OnTapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

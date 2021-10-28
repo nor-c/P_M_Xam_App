@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P_M_Xam_App.Pages.PlaceOrderPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LblAreaName"
+                   Grid.Column="1"
+                   TextColor="#2C2C2C"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <Label Margin="10" x:Name="LblProductNme"/>
+            <Label Margin="10" x:Name="LblPrice"/>
+
+            <CollectionView x:Name="CvProducts"
+                            SelectionMode="Single"
+                            SelectionChanged="CvProducts_OnSelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Spacing="0">
+                            <Frame CornerRadius="10"
+                                   HasShadow="False"
+                                   BackgroundColor="AntiqueWhite"
+                                   Margin="15,0,15,0"
+                                   Padding="20">
+                                <StackLayout Spacing="5"
+                                             Orientation="Horizontal">
+                                    <Label TextColor="#2C2C2C" 
+                                           Text="{Binding ProductName}"/>
+                                    <Label TextColor="#2C2C2C" Margin="20,0,0,0"
+                                           Text="{Binding Price, StringFormat='Price: {0}'}"/>
+
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,100">
+                <Label x:Name="LblTotalPrice" Margin="10,0"/>
+                <Label x:Name="LblCurrencyID" TextColor="#2C2C2C"/>
+            </StackLayout>
+            <Button CornerRadius="25" Text="Next"
+                    BackgroundColor="#FA6400"
+                    TextColor="White"
+                    x:Name="BtnPlaceOrder" 
+                    Clicked="BtnPlaceOrder_OnClicked"
+                    />
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P_M_Xam_App.Pages.ProvidersPage">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout BackgroundColor="#F1F1F1">
+                <StackLayout>
+                    <StackLayout >
+                        <Image Source="logout.png"
+                               Margin="15"
+                               HeightRequest="30"
+                               WidthRequest="30" 
+                               HorizontalOptions="EndAndExpand"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="TapLogout" Tapped="TapLogout_OnTapped"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                    <Label 
+                           Text="Providers"
+                           HorizontalTextAlignment="Center"
+                           FontFamily="Lobster"
+                           FontAttributes="Bold, Italic"
+                           FontSize="30"
+                           TextColor="#C44200"/>
+                    <CollectionView  x:Name="CvProviders"
+                                     SelectionMode="Single"
+                                     SelectionChanged="CvProviders_OnSelectionChanged">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                
+                                    <StackLayout Orientation="Horizontal"  Margin="20">
+                                        <Label TextColor="#888888"
+                                               VerticalTextAlignment="Center"
+                                               FontSize="Medium" 
+                                               Text="{Binding ProviderName}"/>
+                                    </StackLayout>
+                                    
+                                
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

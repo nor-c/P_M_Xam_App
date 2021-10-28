@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P_M_Xam_App.Pages.CompleteOrderDetailPage">
+    <ContentPage.Content>
+        <StackLayout Margin="0,60,0,60" Spacing="10">
+            <Label Text="The fake Order Detail Page is bound from an unsuccessful Product/Confirm post."
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#2C2C2C" />
+            <StackLayout>
+                <Label Text="Area ID" FontAttributes="Bold"/>
+                <Label x:Name="LblAreaName"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Product ID" FontAttributes="Bold"/>
+                <Label x:Name="LblProductId"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Start Date" FontAttributes="Bold"/>
+                <Label x:Name="LblStartDate"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label x:Name="LblCurrency" />
+                <Label x:Name="LblPrice" Margin="10,0"/>
+
+            </StackLayout>
+            <StackLayout Margin="20">
+                <Image Source="emo.png"
+                       HorizontalOptions="Center"
+                       HeightRequest="200" />
+            </StackLayout>
+            <StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
